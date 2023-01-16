@@ -8,6 +8,14 @@
 </head>
 <body>
 
+    <nav>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/about/culture">About culture</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </nav>
+
+    <h1>My Tasks</h1>
     <ul>
         <?php foreach ( $tasks as $task ): ?>
             <li>

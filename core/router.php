@@ -1,6 +1,16 @@
 <?php
 
-class router {
+class Router {
+    
+    public static function load ( $file ) {
+
+        $router = new static;
+
+        require $file;
+
+        return $router;
+
+    }
 
     protected $routes = [];
     public function define( $routes ) {

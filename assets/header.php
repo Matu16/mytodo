@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    
-    <nav>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/about/culture">About culture</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/work">Work</a></li>
-    </nav>
+
+    <?php
+        require_once('nav.php')
+    ?>

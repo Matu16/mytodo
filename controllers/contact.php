@@ -1,5 +1,5 @@
 <?php
 
-$contacts = $app['database']->selectAll('contacts');
+    $contacts = $app['database']->selectAll('contacts');
 
-require_once('views/contact.view.php');
+    require_once('views/contact.view.php');

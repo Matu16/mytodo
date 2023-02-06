@@ -1,32 +1,35 @@
 <?php
 
-class Router {
-    
-    public static function load ( $file ) {
+    class Router {
 
-        $router = new static;
+        protected $routes = [
+            'GET' => [],
+            'POST' => []
+        ];
 
-        require $file;
+        public static function load ( $file ) {
+            
+            $router = new static;
+            
+            require $file;
 
-        return $router;
+            return $router;
 
-    }
-
-    protected $routes = [];
-    public function define( $routes ) {
-
-        $this->routes = $routes;
-
-    }
-
-    public function direct ($uri) {
-
-        if ( array_key_exists($uri, $this->routes) ) {
-            return $this->routes[$uri];
         }
 
-        throw new Exception('No route defined for this URL');
+        public function get ( $uri, $controller ) {
+            $this->routes['GET'][$uri] = $controller;
+        }
 
+        public function post ( $uri, $controller ) {
+            $this->routes['POST'][$uri] = $controller;
+        }
+        
+        
+        public function direct ( $uri, $requestType ) {
+            if ( array_key_exists ( $uri, $this->routes[$requestType] ) ) {
+                return $this->routes[$requestType][$uri];
+            }
+            throw new Exception('No route defined for this URI');
+        }
     }
-
-}

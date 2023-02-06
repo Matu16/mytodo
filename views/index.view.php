@@ -1,10 +1,12 @@
-<?php
+<?php require_once('partials/head.php'); ?>
+<h2>Lisa ülesanne</h2>
 
-    require_once('assets/header.php');
-    
-?>
+<form action="/task" method="post">
+    <input type="text" name="task">
+    <input type="submit" value="Send">
+</form>
 
-    <h1>My Tasks</h1>
+<h2>To do list</h2>
     <ul>
         <?php foreach ( $tasks as $task ): ?>
             <li>
@@ -21,8 +23,5 @@
         <?php endforeach;  ?>
     </ul>
 
-<?php
+<?php require_once('partials/head.php'); ?>
 
-    require_once('assets/footer.php');
-
-?>

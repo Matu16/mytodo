@@ -15,4 +15,24 @@ class QueryBuilder {
         return $stmt->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function insert ( $table, $parameters, $route ) {
+
+        $sql = sprintf(
+            'INSERT INTO %s (%s) VALUES (%s);',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
+        );
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+            header('Location: ' . $route);
+        } catch ( Eception $e ) {
+            die('Ups! Midagi läks valesti!');
+        }
+        
+
+    }
+
 }

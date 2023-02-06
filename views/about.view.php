@@ -1,13 +1,5 @@
-<?php
-
-    require_once('assets/header.php');
-    
-?>
+<?php require_once('partials/head.php'); ?>
 
     <h1>About Us</h1>
 
-<?php
-
-    require_once('assets/footer.php');
-
-?>
+<?php require_once('partials/head.php'); ?>

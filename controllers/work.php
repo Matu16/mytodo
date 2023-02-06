@@ -1,5 +1,5 @@
 <?php
 
-    $work = $app['database']->selectAll('work');
-    
+    $works = $app['database']->selectAll('work');
+
     require_once('views/work.view.php');

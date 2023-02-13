@@ -6,3 +6,5 @@
     $router->get('contact', 'PagesController@contact');
     $router->get('work', 'PagesController@work');
     $router->post('task', 'PagesController@add_task');
+    
+    $router->get('tasks', 'TasksController@index');

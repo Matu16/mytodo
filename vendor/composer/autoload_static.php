@@ -17,6 +17,7 @@ class ComposerStaticInitae04e85c4063835bf30e772495b43991
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',
         'Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'TasksController' => __DIR__ . '/../..' . '/controllers/TasksController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -1,8 +1,8 @@
 <?php require_once('partials/head.php'); ?>
 
-<h1>Home</h1>
+<h1>Tasks</h1>
 
-<!--<h2>Lisa:</h2>
+<h2>Lisa:</h2>
  <form action="/task" method="post">
     <input type="text" name="task">
     <input type="submit" value="Send">
@@ -24,7 +24,7 @@
                 <?php endif; ?>
             </li>
         <?php endforeach;  ?>
-    </ul> -->
+    </ul>
 
 <?php require_once('partials/head.php'); ?>
 

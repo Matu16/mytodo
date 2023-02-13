@@ -1,12 +1,13 @@
 <?php require_once('partials/head.php'); ?>
-<h2>Lisa ülesanne</h2>
+<h2>Lisa:</h2>
 
 <form action="/task" method="post">
     <input type="text" name="task">
     <input type="submit" value="Send">
 </form>
 
-<h2>To do list</h2>
+
+<h2>Ülesanded:</h2>
     <ul>
         <?php foreach ( $tasks as $task ): ?>
             <li>

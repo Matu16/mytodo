@@ -1,6 +1,6 @@
 <?php require_once('partials/head.php'); ?>
 
-    <h1>Come to work with us</h1>
+    <h1>Works:</h1>
 
     <ul>
         <?php foreach ( $works as $work ): ?>

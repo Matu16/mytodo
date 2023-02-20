@@ -13,6 +13,7 @@ class ComposerStaticInitae04e85c4063835bf30e772495b43991
         'Composer\\Autoload\\ComposerStaticInitae04e85c4063835bf30e772495b43991' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Connection' => __DIR__ . '/../..' . '/core/database/connection.php',
+        'NewsController' => __DIR__ . '/../..' . '/controllers/NewsController.php',
         'PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
         'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'Request' => __DIR__ . '/../..' . '/core/Request.php',

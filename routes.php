@@ -8,3 +8,5 @@
     $router->post('task', 'PagesController@add_task');
     
     $router->get('tasks', 'TasksController@index');
+    $router->get('news/post', 'newsController@index');
+

@@ -1,30 +1,15 @@
 <?php require_once('partials/head.php'); ?>
 
-<h1>Home</h1>
+<h1>UUDISED</h1>
 
-<!--<h2>Lisa:</h2>
- <form action="/task" method="post">
-    <input type="text" name="task">
-    <input type="submit" value="Send">
+<h2>Loo uus:</h2>
+<form action="news/post" method="post">
+    <input type="text" name="title">
+    <input type="text" name="content">
+    <input type="submit" value="send">
 </form>
 
 
-<h2>Ülesanded:</h2>
-    <ul>
-        <?php foreach ( $tasks as $task ): ?>
-            <li>
-                <?php if ( $task->completed ): ?>
-                    <strike>
-                <?php endif; ?>
-
-                <?= $task->description; ?>
-
-                <?php if ( $task->completed ): ?>
-                </strike>
-                <?php endif; ?>
-            </li>
-        <?php endforeach;  ?>
-    </ul> -->
 
 <?php require_once('partials/head.php'); ?>
 

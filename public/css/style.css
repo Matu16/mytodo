@@ -6,3 +6,31 @@ body {
 a {
     color: rgb(210, 210, 210);
 }
+
+.news_base{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.news_card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgb(61, 61, 61);
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: wheat;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.news_edit{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}

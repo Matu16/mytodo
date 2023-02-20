@@ -2,9 +2,9 @@
 
     class PagesController {
 
-        public function home () {
-            return view('index');
-        }
+        // public function home () {
+        //     return view('index');
+        // }
 
         public function contact () {
             $contacts = App::get('database')->selectAll('contacts');

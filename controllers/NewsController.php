@@ -43,10 +43,9 @@ class NewsController {
     
         App::get('database')->delete(
             'uudised',
-            "id = '$id'",
-            '/'
+            $id,
         );
-        
+        header("Location: /");
     }
 
     public function edit () {
@@ -56,5 +55,20 @@ class NewsController {
 
         return view('edit', ['post' => $post]);
         
+    }
+
+    public function editpost() {
+
+        $title      =   $_POST['title'];
+        $content    =   $_POST['content'];
+        $id         =   $_POST['id'];
+
+        App::get('database')->update(
+            'uudised',
+            "title = '$title', content = '$content'",
+            $id,
+        );
+        header("Location: /");
+
     }
 }

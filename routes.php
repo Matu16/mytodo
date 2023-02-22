@@ -13,4 +13,4 @@
     $router->post('task', 'PagesController@add_task');
     $router->post('news/post', 'NewsController@post');
     $router->post('news/delete', 'NewsController@delete');
-    $router->post('news/edit', 'NewsController@edit');
+    $router->post('news/edit/post', 'NewsController@editpost');

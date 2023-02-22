@@ -37,13 +37,12 @@ class QueryBuilder {
     
     }
 
-    public function delete( $table, $parameters, $route ){
+    public function delete( $table, $id ){
 
-        $stmt = $this->pdo->prepare("DELETE FROM {$table} WHERE {$parameters}");
-        $stmt->execute();
+        $stmt = $this->pdo->prepare("DELETE FROM {$table} WHERE id=:id;");
+        $stmt->execute(['id' => $id]);
 
         $stmt->fetchAll(PDO::FETCH_CLASS);
-        header('Location: ' . $route);
 
     }
 
@@ -53,6 +52,15 @@ class QueryBuilder {
         $stmt->execute(['id' => $id]);
 
         return $stmt->fetch();
+    }
+
+    public function update( $table, $parameters, $id ){
+
+        $stmt = $this->pdo->prepare("UPDATE {$table} SET {$parameters} WHERE id=$id;");
+        $stmt->execute();
+
+        $stmt->fetchAll(\PDO::FETCH_CLASS);
+
     }
 
 }
